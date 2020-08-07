@@ -24,6 +24,5 @@ export class FavoriteComponent {
   onClick = ()=>{
     this.isFavorite = !this.isFavorite;
     this.iconStye = this.isFavorite ? "fas" : "far";
-    console.log(this.isFavorite);
   } 
 }
