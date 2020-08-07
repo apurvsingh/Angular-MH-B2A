@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faStar} from '@fortawesome/free-regular-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
@@ -13,6 +13,7 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 export class FavoriteComponent {
   
   @Input('is-Favorite') isFavorite : boolean;
+  @Output() change = new EventEmitter();
   iconStye = "far";
 
   constructor(library: FaIconLibrary) {
@@ -23,5 +24,6 @@ export class FavoriteComponent {
   onClick = ()=>{
     this.isFavorite = !this.isFavorite;
     this.iconStye = this.isFavorite ? "fas" : "far";
+    this.change.emit('JSR');
   } 
 }

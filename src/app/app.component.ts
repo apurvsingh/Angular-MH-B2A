@@ -10,4 +10,8 @@ export class AppComponent {
   model ={
     isFavorite: false
   };
+
+  changedFavoriteEvent=()=>{
+    console.log("Hello from the app component");
+  }
 }
