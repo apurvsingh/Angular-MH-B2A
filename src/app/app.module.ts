@@ -3,16 +3,23 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AuthorsComponent } from './authors/authors.component';
+import {GetAuthorService} from './get-author.service';
+import { FormsModule } from '@angular/forms';
+import { FavoriteComponent } from './favorite/favorite.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AuthorsComponent,
+    FavoriteComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [GetAuthorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
