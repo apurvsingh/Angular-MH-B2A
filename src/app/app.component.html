@@ -1,4 +1,9 @@
 <h1>Angular App</h1>
 <app-favorite [is-Favorite]="model.isFavorite" (change)="changedFavoriteEvent($event)"></app-favorite>
 <!--<app-authors></app-authors>-->
-<app-panel></app-panel>
+<app-panel>
+    <ng-container class="heading">Header here</ng-container>
+    <div class="body">
+        <p >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+</app-panel>
