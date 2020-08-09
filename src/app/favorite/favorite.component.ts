@@ -13,7 +13,7 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 export class FavoriteComponent {
   
   @Input('is-Favorite') isFavorite : boolean;
-  @Output() change = new EventEmitter();
+  @Output('change') change = new EventEmitter();
   iconStye = "far";
 
   constructor(library: FaIconLibrary) {
@@ -24,6 +24,10 @@ export class FavoriteComponent {
   onClick = ()=>{
     this.isFavorite = !this.isFavorite;
     this.iconStye = this.isFavorite ? "fas" : "far";
-    this.change.emit('JSR');
+    this.change.emit({'newValue' : this.isFavorite});
   } 
+}
+
+export interface FavoriteChangedEventArgs{
+  newValue : boolean
 }
