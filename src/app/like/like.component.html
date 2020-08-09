@@ -1,0 +1,6 @@
+<fa-icon [icon]="[iconStyle, 'heart']" size="lg" [styles]="{'stroke': color, 'color': color}" (click)="onClick()"></fa-icon>
+
+<div class="box">
+    <ng-content class="" select="[tweetBody]"></ng-content>
+    <ng-content class="" select="[numberOfTweets]"></ng-content>
+</div>
